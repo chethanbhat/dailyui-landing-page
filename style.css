@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body-styling */
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#container {
+  display: flex;
+}
+
+#container .left-box {
+  flex: 1;
+  background: pink;
+  background: url('image1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* For Background Layer */
+  position: relative;
+  z-index: 5;
+}
+
+/* For Background Layer */
+.left-box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: -5;
+}
+
+#container .right-box {
+  flex: 1;
+  background: #fff;
+  ;
+
+
+}
+
+/* left-box-styling */
+
+.coral-text {
+  color: coral;
+}
+
+.main-title {
+  color: coral;
+  font-size: 20px;
+  padding: 10px 40px;
+}
+
+.sub-title {
+  color: white;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.lists {
+  padding: 5px 40px;
+}
+
+.price {
+  color: red;
+  font-size: 20px;
+  padding: 10px 40px;
+}
+
+.bottom-text {
+  font-size: 12px;
+  padding: 2px 40px;
+  color: white;
+}
+
+/* right-box-styling */
+
+
+
+
+.main-heading {
+  font-size: 40px;
+  color: blue;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-weight: none;
+}
+
+.list-items {
+  list-style: none;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
